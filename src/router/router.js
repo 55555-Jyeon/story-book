@@ -1,11 +1,11 @@
-import { createBrowserRouter } from 'react-router-dom';
-import App from '../App';
+import { createBrowserRouter } from "react-router-dom";
+import SignUpForm from "../pages/signup-form";
 
 const router = createBrowserRouter([
-    {
-        path: '/',
-        element: <App />,
-    },
+  {
+    path: "/",
+    element: <SignUpForm />,
+  },
 ]);
 
 export default router;
