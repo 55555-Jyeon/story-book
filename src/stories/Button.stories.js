@@ -1,29 +1,33 @@
-import Button from "./Button";
+import { Button } from './Button';
+// import facebook from './assets/facebook.png';
+// import instagram from './assets/instagram.png';
+// import twitter from './assets/twitter.png';
 
+
+// args: 인수(값, 변수, 참조 등 전달되는 값)를 정의
+// stories 화면 렌더해주는 부분 공용화된 것들을!
 export default {
-  title: "MyStory/Button",
   component: Button,
-
-  argTypes: {
-    color: { control: "color", options: ["purple", "gray"] },
-    size: { control: { options: ["big", "small"] } },
-    text: { control: "text" },
-  },
 };
 
-export const PopUpCircle = (args) => <Button {...args}></Button>;
-export const SubmitButton = (args) => <Button {...args}></Button>;
 
-PopUpCircle.parameters = {
-  design: {
-    type: "figma",
-    url: "https://www.figma.com/file/awaS3bvQDRPb8b5njurGJs/story-book?type=design&node-id=1%3A4&mode=design&t=8usisL7PuNaLBMSG-1",
+/* size */
+export const SubmitButton = {
+  args: {
+    primary: false,
+    size: "Square",
+    label: 'Sign Up',
   },
 };
-
-SubmitButton.parameters = {
-  design: {
-    type: "figma",
-    url: "https://www.figma.com/file/awaS3bvQDRPb8b5njurGJs/story-book?type=design&node-id=1%3A4&mode=design&t=8usisL7PuNaLBMSG-1",
+export const SNSLogin = {
+  args: {
+    primary: true,
+    size: "largeCircle",
+  },
+};
+export const Gender = {
+  args: {
+    primary: false,
+    size: "smallCircle",
   },
 };
